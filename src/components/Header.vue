@@ -1,0 +1,102 @@
+<template>
+  <div class="header-ctn section">
+    <div class="inner">
+      <router-link class="logo" to="/">
+        <img src="@/assets/bitmaps/logo.png" alt="">
+      </router-link>
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <SearchIcon class="search-icon" />
+      </div>
+      <div class="quick-actions">
+        <router-link to="/">
+          <HomeIcon />
+        </router-link>
+        <router-link to="/">
+          <MessageIcon/>
+        </router-link>
+        <router-link to="/">
+          <NewPostIcon/>
+        </router-link>
+        <router-link to="/">
+          <ExploreIcon/>
+        </router-link>
+        <router-link to="/">
+          <ActivityIcon/>
+        </router-link>
+        <div class="profile-btn">
+          <img src="@/assets/bitmaps/profile-image.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import HomeIcon from './HomeIcon.vue'
+import SearchIcon from './SearchIcon.vue'
+import MessageIcon from './MessageIcon.vue'
+import NewPostIcon from './NewPostIcon.vue'
+import ActivityIcon from './ActivityIcon.vue'
+import ExploreIcon from './ExploreIcon.vue'
+export default {
+  name: 'Header',
+  components: {
+    HomeIcon, SearchIcon, MessageIcon, NewPostIcon, ActivityIcon, ExploreIcon
+  }
+}
+</script>
+
+<style scoped>
+.header-ctn {
+  border-bottom: 1px solid var(--border-color);
+}
+.header-ctn > .inner {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-ctn > .inner > * {
+  flex-basis: 30%;
+}
+.search-bar {
+  position: relative;
+}
+.search-bar > input {
+  background: rgba(239,239,239,1);
+  border: none;
+  outline: none;
+  height: 36px;
+  max-width: 270px;
+  padding: 0 8px;
+  padding-left: 40px;
+  border-radius: 8px;
+  color: rgba(142,142,142,1);
+  font-size: 1rem;
+}
+.search-bar > input::placeholder {
+  color: rgba(142,142,142,1);
+  font-weight: lighter;
+}
+.search-bar .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+}
+.quick-actions > * {
+  margin-left: 22px;
+}
+.profile-btn {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background: none;
+  outline: none;
+  border: none;
+}
+.profile-btn > img {
+  width: 100%;
+  border-radius: 50%;
+}
+</style>
