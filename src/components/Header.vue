@@ -50,6 +50,11 @@ export default {
 <style scoped>
 .header-ctn {
   border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  width: 100%;
+  background: #FFF;
+  z-index: 1;
+  top: 0;
 }
 .header-ctn > .inner {
   height: 60px;
@@ -59,6 +64,9 @@ export default {
 }
 .header-ctn > .inner > * {
   flex-basis: 30%;
+}
+.header-ctn .logo {
+  height: 24px;
 }
 .search-bar {
   position: relative;

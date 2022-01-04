@@ -1,7 +1,7 @@
 <template>
   <div class="app-ctn">
     <Header />
-    <RouterView/>
+    <RouterView class="mt-60"/>
   </div>
 </template>
 
@@ -33,6 +33,7 @@ export default {
 }
 .section > .inner {
   width: 935px;
+  position: relative;
 }
 button {
   cursor: pointer;
@@ -47,6 +48,9 @@ button {
 }
 .fade {
   opacity: 0.3;
+}
+.mt-60 {
+  padding-top: 60px;
 }
 </style>
 

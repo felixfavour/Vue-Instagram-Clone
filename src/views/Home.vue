@@ -26,12 +26,13 @@ export default {
 <style scoped>
 .section > .inner {
   display: flex;
+  position: relative;
 }
 .left-side {
   max-width: 615px;
   margin-right: 28px;
 }
 .right-side {
-  width: 100%;
+  position: relative;
 }
 </style>

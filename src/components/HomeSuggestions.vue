@@ -79,7 +79,8 @@ export default {
 
 <style scoped>
   .home-suggestions-ctn {
-    width: 100%;
+    width: 300px;
+    position: fixed;
   }
   .profile {
     display: flex;
