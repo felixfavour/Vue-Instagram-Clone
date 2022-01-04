@@ -3,9 +3,14 @@
     <div class="inner-ctn">
       <img src="@/assets/bitmaps/profile-image.jpeg" alt="">
     </div>
-    <span class="username">
-      raphfelix
-    </span>
+    <div class="not-image">
+      <div class="username">
+        raphfelix
+      </div>
+      <div class="info">
+        New to Instagram
+      </div>
+    </div>
   </div>
 </template>
 
@@ -35,7 +40,14 @@ export default {
     object-fit: cover;
     border-radius: 50%;
   }
-  .username {
+  .not-image {
     margin-left: 12px;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+  .info {
+    color: var(--grey-text);
+    font-size: 0.75rem;
+    margin-top: 2px;
   }
 </style>

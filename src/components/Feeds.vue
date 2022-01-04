@@ -17,6 +17,5 @@ export default {
 <style scoped>
   .feeds-ctn {
     max-width: 615px;
-    margin-right: 25px;
   }
 </style>

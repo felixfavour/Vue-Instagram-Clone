@@ -68,21 +68,22 @@ export default {
   border: none;
   outline: none;
   height: 36px;
-  max-width: 270px;
+  width: 270px;
+  max-width: 230px;
   padding: 0 8px;
-  padding-left: 40px;
+  padding-left: 46px;
   border-radius: 8px;
   color: rgba(142,142,142,1);
   font-size: 1rem;
 }
 .search-bar > input::placeholder {
   color: rgba(142,142,142,1);
-  font-weight: lighter;
+  font-weight: 300;
 }
 .search-bar .search-icon {
   position: absolute;
   left: 16px;
-  top: 8px;
+  top: 10px;
 }
 .quick-actions > * {
   margin-left: 22px;
