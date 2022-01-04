@@ -23,6 +23,49 @@
       </div>
       <FollowUserInfoIcon v-for="user in 5" :key="user" />
     </div>
+    <div class="footer">
+      <div class="footer-text">
+        <button class="clear-btn">
+          About
+        </button>
+        <button class="clear-btn">
+          Help
+        </button>
+        <button class="clear-btn">
+          Press
+        </button>
+        <button class="clear-btn">
+          API
+        </button>
+        <button class="clear-btn">
+          Jobs
+        </button>
+        <button class="clear-btn">
+          Privacy
+        </button>
+        <button class="clear-btn">
+          Terms
+        </button>
+        <button class="clear-btn">
+          Locations
+        </button>
+        <button class="clear-btn">
+          Top accounts
+        </button>
+        <button class="clear-btn">
+          Hashtags
+        </button>
+        <button class="clear-btn">
+          Language
+        </button>
+      </div>
+      <div class="credits">
+        <span class="clear-btn">
+
+        Instagram with Vue.js by <a target="_blank" href="https://favourfelix.com"><img src="@/assets/bitmaps/ff-logo.png" alt=""></a>
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -83,6 +126,34 @@ export default {
     font-size: 0.75rem;
     text-decoration: none;
     color: #000;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 32px;
+    opacity: 0.7;
+  }
+  .footer .clear-btn {
+    margin-right: 4px;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  .footer-text .clear-btn::after {
+    content: '\00B7';
+  }
+  .footer-text .clear-btn:nth-last-child(1):after {
+    content: '';
+  }
+  .footer .credits {
+    margin-top: 18px;
+  }
+  .footer .credits > span {
+    display: flex;
+    align-items: center;
+  }
+  .footer .credits img {
+    width: 70px;
+    margin-left: 8px;
   }
 
 </style>

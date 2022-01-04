@@ -130,9 +130,10 @@ export default {
     font-weight: 600;
   }
   .post-time {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: var(--grey-text);
     text-transform: uppercase;
+    margin-top: 8px;
   }
   .post-comment {
     border-top: 1px solid var(--border-color);

@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
   .story-circle-ctn {
-    margin: 16px 12px;
+    margin: 16px 10px;
     position: relative;
     display: flex;
     flex-direction: column;

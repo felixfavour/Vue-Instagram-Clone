@@ -18,8 +18,13 @@ export default {
   .stories-ctn {
     display: flex;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: scroll;
     border: 1px solid var(--border-color);
     border-radius: 3px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .stories-ctn::-webkit-scrollbar {
+    display: none;
   }
 </style>
