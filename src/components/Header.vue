@@ -25,7 +25,7 @@
           <ActivityIcon/>
         </router-link>
         <div class="profile-btn">
-          <img src="@/assets/bitmaps/profile-image.jpeg" alt="">
+          <img src="@/assets/bitmaps/profile-image.png" alt="">
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
   <div class="home-suggestions-ctn">
     <div class="profile">
       <div class="about">
-        <img src="@/assets/bitmaps/profile-image.jpeg" alt="">
+        <img src="@/assets/bitmaps/profile-image.png" alt="">
         <div class="names">
           <div>raphfelix</div>
           <div>C H I N E M E R E M</div>

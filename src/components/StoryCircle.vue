@@ -1,7 +1,7 @@
 <template>
   <div class="story-circle-ctn">
     <div class="inner-ctn">
-      <img src="@/assets/bitmaps/profile-image.jpeg" alt="">
+      <img src="@/assets/bitmaps/profile-image.png" alt="">
     </div>
     <div class="username">
       raphfelix
