@@ -93,6 +93,7 @@ export default {
   .right-side {
     display: grid;
     width: calc(100% - 350px);
+    height: calc(100vh - 120px);
     place-items: center;
   }
   .empty-state {
@@ -118,9 +119,6 @@ export default {
     font-weight: 500;
     border-radius: 4px;
     font-size: 0.875rem;
-  }
-  .conversation {
-
   }
 
 </style>
