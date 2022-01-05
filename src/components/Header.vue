@@ -10,16 +10,16 @@
       </div>
       <div class="quick-actions">
         <router-link to="/">
-          <HomeIcon />
+          <HomeIcon :active="$route.path === '/'" />
         </router-link>
-        <router-link to="/">
-          <MessageIcon/>
+        <router-link to="/messages">
+          <MessageIcon :active="$route.path.includes('messages')" />
         </router-link>
         <router-link to="/">
           <NewPostIcon/>
         </router-link>
-        <router-link to="/">
-          <ExploreIcon/>
+        <router-link to="/explore">
+          <ExploreIcon :active="$route.path.includes('explore')" />
         </router-link>
         <router-link to="/">
           <ActivityIcon/>

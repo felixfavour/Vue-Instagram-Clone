@@ -52,5 +52,15 @@ button {
 .mt-60 {
   padding-top: 60px;
 }
+.reveals {
+  animation: reveals .4s ease-in-out;
+  -webkit-animation: reveals .4s ease-in-out;
+}
+@keyframes reveals {
+  0% {opacity: 0;transform: scale(0.6);}
+  60% {opacity: 1;transform: scale(1);}
+  80% {opacity: 1;transform: scale(0.9);}
+  100% {opacity: 1;transform: scale(1);}
+}
 </style>
 
