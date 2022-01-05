@@ -20,7 +20,7 @@
       </button>
     </div>
     <div class="messages">
-      <Message v-for="message in 25" :sent="false" :key="message" />
+      <Message v-for="message in 25" :sent="message % 2 === 0" :key="message" />
     </div>
     <div class="message-input-ctn">
       <div class="message-input">
