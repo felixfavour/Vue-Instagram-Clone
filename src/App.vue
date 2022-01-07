@@ -54,6 +54,33 @@ button {
   font-size: 0.875rem;
   color: var(--grey-text);
 }
+.drop-modal {
+  box-shadow: 0 0 5px 3px rgb(0 0 0 / 10%);
+  overflow-y: auto;
+}
+.triangle-pointer {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  box-shadow: 0 0 5px 3px rgb(0 0 0 / 10%);
+  transform: rotate(45deg);
+  position: absolute;
+  top: -5px;
+  right: 52px;
+  z-index: -1;
+}
+.tp-cover {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -5px;
+  right: 52px;
+}
+
 .fade {
   opacity: 0.3;
 }

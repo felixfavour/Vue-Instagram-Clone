@@ -21,8 +21,9 @@
         <router-link to="/explore">
           <ExploreIcon :active="$route.name ==='explore'" />
         </router-link>
-        <router-link to="/">
+        <router-link to="/" @click="activityModalVisible = true" @blur="activityModalVisible = false">
           <ActivityIcon/>
+          <ActivityModal v-show="activityModalVisible"/>
         </router-link>
         <div class="profile-btn">
           <img src="@/assets/bitmaps/profile-image.png" alt="">
@@ -39,10 +40,17 @@ import MessageIcon from './MessageIcon.vue'
 import NewPostIcon from './NewPostIcon.vue'
 import ActivityIcon from './ActivityIcon.vue'
 import ExploreIcon from './ExploreIcon.vue'
+import ActivityModal from './ActivityModal.vue'
 export default {
   name: 'Header',
   components: {
-    HomeIcon, SearchIcon, MessageIcon, NewPostIcon, ActivityIcon, ExploreIcon
+    HomeIcon, SearchIcon, MessageIcon, NewPostIcon, ActivityIcon, ExploreIcon,
+    ActivityModal
+  },
+  data () {
+    return {
+      activityModalVisible: false
+    }
   }
 }
 </script>
@@ -95,6 +103,7 @@ export default {
 }
 .quick-actions > * {
   margin-left: 22px;
+  position: relative;
 }
 .profile-btn {
   width: 24px;
