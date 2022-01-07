@@ -5,37 +5,55 @@ import Explore from '../views/Explore.vue'
 import Messages from '../views/Messages.vue'
 import Post from '../views/Post.vue'
 import Profile from '../views/Profile.vue'
+import ProfilePostGrids from '../components/ProfilePostGrids.vue'
+import ProfileSaved from '../components/ProfileSaved.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'about',
     component: About
   },
   {
     path: '/explore',
-    name: 'Explore',
+    name: 'explore',
     component: Explore
   },
   {
     path: '/messages',
-    name: 'Messages',
+    name: 'messages',
     component: Messages
   },
   {
     path: '/post',
-    name: 'Post',
+    name: 'post',
     component: Post
   },
   {
     path: '/profile',
-    name: 'Profile',
+    name: 'profile',
     component: Profile
+  },
+  {
+    path: '/profile/saved',
+    name: 'profile-saved',
+    components: {
+      default: Profile,
+      saved: ProfileSaved
+    }
+  },
+  {
+    path: '/profile/tagged',
+    name: 'profile-tagged',
+    components: {
+      default: Profile,
+      tagged: ProfilePostGrids
+    }
   }
 ]
 

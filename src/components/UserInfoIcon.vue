@@ -4,9 +4,9 @@
       <img src="@/assets/bitmaps/profile-image.png" alt="">
     </div>
     <div class="not-image">
-      <div class="username">
+      <router-link to="/profile" class="username">
         raphfelix
-      </div>
+      </router-link>
       <div class="info">
         New to Instagram
       </div>
@@ -49,5 +49,12 @@ export default {
     color: var(--grey-text);
     font-size: 0.75rem;
     margin-top: 2px;
+  }
+  .username {
+    text-decoration: none;
+    color: #000000;
+  }
+  .username:hover {
+    text-decoration: underline;
   }
 </style>

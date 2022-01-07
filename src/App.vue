@@ -2,6 +2,12 @@
   <div class="app-ctn">
     <Header />
     <RouterView class="mt-60"/>
+    <div class="section">
+      <div class="inner">
+        <RouterView name="saved"/>
+        <RouterView name="tagged"/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -30,6 +36,7 @@ export default {
 }
 .section.page {
   margin: 28px 0;
+  margin-bottom: 0;
 }
 .section > .inner {
   width: 935px;
@@ -39,6 +46,7 @@ button {
   cursor: pointer;
 }
 .clear-btn {
+  text-decoration: none;
   outline: none;
   background: none;
   border: none;
@@ -51,6 +59,9 @@ button {
 }
 .mt-60 {
   padding-top: 60px;
+}
+.mt-0 {
+  margin-top: 0px;
 }
 .reveals {
   animation: reveals .4s ease-in-out;
