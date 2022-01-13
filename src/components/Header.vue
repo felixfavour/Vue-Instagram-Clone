@@ -15,9 +15,10 @@
         <router-link to="/messages">
           <MessageIcon :active="$route.name === 'messages'" />
         </router-link>
-        <router-link to="/">
-          <NewPostIcon/>
-        </router-link>
+        <button class="clear-btn" @click="setNPModalVisible(true)">
+          <NewPostIcon :active="npModalVisible"/>
+          <NewPostModal v-show="npModalVisible"/>
+        </button>
         <router-link to="/explore">
           <ExploreIcon :active="$route.name ==='explore'" />
         </router-link>
@@ -44,16 +45,18 @@ import ActivityIcon from './ActivityIcon.vue'
 import ExploreIcon from './ExploreIcon.vue'
 import ActivityModal from './ActivityModal.vue'
 import ProfileModal from './ProfileModal.vue'
+import NewPostModal from './NewPostModal.vue'
 export default {
   name: 'Header',
   components: {
     HomeIcon, SearchIcon, MessageIcon, NewPostIcon, ActivityIcon, ExploreIcon,
-    ActivityModal, ProfileModal
+    ActivityModal, ProfileModal, NewPostModal
   },
   computed: {
     ...mapState({
       activityModalVisible: state => state.header.activityModalVisible,
-      profileModalVisible: state => state.header.profileModalVisible
+      profileModalVisible: state => state.header.profileModalVisible,
+      npModalVisible: state => state.header.npModalVisible
     })
   },
   methods: {
@@ -62,6 +65,9 @@ export default {
     },
     setProfileModalVisibility () {
       this.$store.commit('header/setProfileModalVisible', !this.profileModalVisible)
+    },
+    setNPModalVisible () {
+      this.$store.commit('header/setNPModalVisible', !this.npModalVisible)
     }
   }
 }
@@ -90,6 +96,7 @@ export default {
 }
 .search-bar {
   position: relative;
+  z-index: -1;
 }
 .search-bar > input {
   background: rgba(239,239,239,1);
