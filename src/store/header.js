@@ -1,4 +1,5 @@
 const headerStore = {
+  namespaced: true,
   state: {
     activityModalVisible: false
   },

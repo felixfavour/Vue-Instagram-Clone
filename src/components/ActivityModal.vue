@@ -1,6 +1,6 @@
 <template>
-  <div class="activity-modal-ctn drop-modal">
-    <div class="bg-layer" @click="$emit('close')"/>
+  <div class="activity-modal-ctn drop-modal" @click.stop>
+    <div class="bg-layer" @click="setActivityModalVisibility(true)"/>
     <div class="triangle-pointer"/>
     <div class="tp-cover" />
     <div class="inner">
@@ -24,7 +24,12 @@
 import ActivityItem from './ActivityItem.vue'
 export default {
   name: 'ActivityModal',
-  components: { ActivityItem }
+  components: { ActivityItem },
+  methods: {
+    setActivityModalVisibility () {
+      this.$store.commit('header/setActivityModalVisible', false)
+    }
+  }
 }
 </script>
 

@@ -17,6 +17,16 @@ export default {
   name: 'App',
   components: {
     Header
+  },
+  watch: {
+    $route() {
+      this.setActivityModalVisibility()
+    }
+  },
+  methods: {
+    setActivityModalVisibility () {
+      this.$store.commit('header/setActivityModalVisible', false)
+    }
   }
 }
 </script>
@@ -56,6 +66,7 @@ button {
 }
 .drop-modal {
   box-shadow: 0 0 5px 3px rgb(0 0 0 / 10%);
+  margin-top: 8px;
 }
 .triangle-pointer {
   content: '';
@@ -80,7 +91,6 @@ button {
   right: 52px;
 }
 .bg-layer {
-  background: #00000030;
   position: fixed;
   inset: 0;
   width: 100%;

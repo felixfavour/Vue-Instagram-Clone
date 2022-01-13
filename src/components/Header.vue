@@ -21,10 +21,10 @@
         <router-link to="/explore">
           <ExploreIcon :active="$route.name ==='explore'" />
         </router-link>
-        <router-link to="/" @click="activityModalVisible = true">
-          <ActivityIcon/>
-          <ActivityModal v-show="activityModalVisible" @close="method()"/>
-        </router-link>
+        <button class="clear-btn" @click="setActivityModalVisibility(true)">
+          <ActivityIcon :active="activityModalVisible"/>
+          <ActivityModal v-show="activityModalVisible"/>
+        </button>
         <div class="profile-btn">
           <img src="@/assets/bitmaps/profile-image.png" alt="">
         </div>
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import HomeIcon from './HomeIcon.vue'
 import SearchIcon from './SearchIcon.vue'
 import MessageIcon from './MessageIcon.vue'
@@ -47,16 +48,14 @@ export default {
     HomeIcon, SearchIcon, MessageIcon, NewPostIcon, ActivityIcon, ExploreIcon,
     ActivityModal
   },
-  data () {
-    return {
-      activityModalVisible: false
-    }
+  computed: {
+    ...mapState({
+      activityModalVisible: state => state.header.activityModalVisible
+    })
   },
   methods: {
-    method () {
-      console.log(this.activityModalVisible)
-      this.activityModalVisible = false
-      console.log(this.activityModalVisible)
+    setActivityModalVisibility () {
+      this.$store.commit('header/setActivityModalVisible', !this.activityModalVisible)
     }
   }
 }
@@ -111,6 +110,7 @@ export default {
 .quick-actions > * {
   margin-left: 22px;
   position: relative;
+  text-align: left;
 }
 .profile-btn {
   width: 24px;
