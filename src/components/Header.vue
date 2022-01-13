@@ -25,9 +25,10 @@
           <ActivityIcon :active="activityModalVisible"/>
           <ActivityModal v-show="activityModalVisible"/>
         </button>
-        <div class="profile-btn">
-          <img src="@/assets/bitmaps/profile-image.png" alt="">
-        </div>
+        <button class="clear-btn profile-btn" @click="setProfileModalVisibility(true)">
+          <img src="@/assets/bitmaps/profile-image.png" :class="{ active: profileModalVisible }" alt="">
+          <ProfileModal v-show="profileModalVisible"/>
+        </button>
       </div>
     </div>
   </div>
@@ -42,20 +43,25 @@ import NewPostIcon from './NewPostIcon.vue'
 import ActivityIcon from './ActivityIcon.vue'
 import ExploreIcon from './ExploreIcon.vue'
 import ActivityModal from './ActivityModal.vue'
+import ProfileModal from './ProfileModal.vue'
 export default {
   name: 'Header',
   components: {
     HomeIcon, SearchIcon, MessageIcon, NewPostIcon, ActivityIcon, ExploreIcon,
-    ActivityModal
+    ActivityModal, ProfileModal
   },
   computed: {
     ...mapState({
-      activityModalVisible: state => state.header.activityModalVisible
+      activityModalVisible: state => state.header.activityModalVisible,
+      profileModalVisible: state => state.header.profileModalVisible
     })
   },
   methods: {
     setActivityModalVisibility () {
       this.$store.commit('header/setActivityModalVisible', !this.activityModalVisible)
+    },
+    setProfileModalVisibility () {
+      this.$store.commit('header/setProfileModalVisible', !this.profileModalVisible)
     }
   }
 }
@@ -107,6 +113,10 @@ export default {
   left: 16px;
   top: 10px;
 }
+.quick-actions {
+  display: flex;
+  align-items: center;
+}
 .quick-actions > * {
   margin-left: 22px;
   position: relative;
@@ -123,5 +133,11 @@ export default {
 .profile-btn > img {
   width: 100%;
   border-radius: 50%;
+  transition: 0.3s;
 }
+/* .profile-btn > img.active {
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid #262626;
+} */
 </style>

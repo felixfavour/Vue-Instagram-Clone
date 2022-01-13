@@ -45,16 +45,8 @@ export default {
     color: #000000;
   }
   .triangle-pointer {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background: #FFFFFF;
-    box-shadow: 0 0 5px 3px rgb(0 0 0 / 10%);
-    transform: rotate(45deg);
-    position: absolute;
     top: -5px;
     right: 52px;
-    z-index: -1;
   }
   .day {
     border-top: 1px solid var(--border-color);

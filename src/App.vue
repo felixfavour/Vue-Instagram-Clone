@@ -20,12 +20,12 @@ export default {
   },
   watch: {
     $route() {
-      this.setActivityModalVisibility()
+      this.closeAllHeaderModals()
     }
   },
   methods: {
-    setActivityModalVisibility () {
-      this.$store.commit('header/setActivityModalVisible', false)
+    closeAllHeaderModals () {
+      this.$store.commit('header/closeModals')
     }
   }
 }
