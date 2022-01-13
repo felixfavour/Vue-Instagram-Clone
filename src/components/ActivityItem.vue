@@ -6,7 +6,7 @@
       </div>
       <div class="not-image">
         <router-link to="/profile" class="notif">
-          <b>raphfelix</b> liked your comment: I am the one. <span class="notif-time">13 h</span>
+          <b>raphfelix</b> liked your comment: I am the one. that is coming for you  <span class="notif-time">13 h</span>
         </router-link>
       </div>
     </div>
@@ -42,8 +42,8 @@ export default {
     align-items: center;
   }
   .inner-ctn {
-    height: 40px;
-    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
     background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
     border-radius: 100%;
     display: grid;
@@ -57,9 +57,11 @@ export default {
     border-radius: 50%;
   }
   .not-image {
-    margin-left: 12px;
     font-weight: 500;
     font-size: 0.875rem;
+    margin-left: 12px;
+    margin-right: 20px;
+    line-height: 1.3rem;
   }
   .info {
     color: var(--grey-text);
@@ -70,7 +72,6 @@ export default {
     text-decoration: none;
     color: #000000;
     font-weight: 400;
-    margin: 0 12px;
   }
   .notif-time {
     text-decoration: none;

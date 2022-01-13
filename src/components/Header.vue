@@ -21,9 +21,9 @@
         <router-link to="/explore">
           <ExploreIcon :active="$route.name ==='explore'" />
         </router-link>
-        <router-link to="/" @click="activityModalVisible = true" @blur="activityModalVisible = false">
+        <router-link to="/" @click="activityModalVisible = true">
           <ActivityIcon/>
-          <ActivityModal v-show="activityModalVisible"/>
+          <ActivityModal v-show="activityModalVisible" @close="method()"/>
         </router-link>
         <div class="profile-btn">
           <img src="@/assets/bitmaps/profile-image.png" alt="">
@@ -50,6 +50,13 @@ export default {
   data () {
     return {
       activityModalVisible: false
+    }
+  },
+  methods: {
+    method () {
+      console.log(this.activityModalVisible)
+      this.activityModalVisible = false
+      console.log(this.activityModalVisible)
     }
   }
 }

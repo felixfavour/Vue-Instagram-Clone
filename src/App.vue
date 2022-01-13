@@ -56,7 +56,6 @@ button {
 }
 .drop-modal {
   box-shadow: 0 0 5px 3px rgb(0 0 0 / 10%);
-  overflow-y: auto;
 }
 .triangle-pointer {
   content: '';
@@ -79,6 +78,14 @@ button {
   position: absolute;
   top: -5px;
   right: 52px;
+}
+.bg-layer {
+  background: #00000030;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .fade {

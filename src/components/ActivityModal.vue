@@ -1,19 +1,22 @@
 <template>
   <div class="activity-modal-ctn drop-modal">
-    <div class="triangle-pointer" />
+    <div class="bg-layer" @click="$emit('close')"/>
+    <div class="triangle-pointer"/>
     <div class="tp-cover" />
-    <div class="day">
-      New
+    <div class="inner">
+      <div class="day">
+        New
+      </div>
+      <ActivityItem v-for="activity in 3" :key="activity" :even="activity % 2  === 0" />
+      <div class="day">
+        Today
+      </div>
+      <ActivityItem v-for="activity in 5" :key="activity" :even="activity % 2  === 0" />
+      <div class="day">
+        This Week
+      </div>
+      <ActivityItem v-for="activity in 20" :key="activity" :even="activity % 2  === 0" />
     </div>
-    <ActivityItem v-for="activity in 3" :key="activity" :even="activity % 2  === 0" />
-    <div class="day">
-      Today
-    </div>
-    <ActivityItem v-for="activity in 5" :key="activity" :even="activity % 2  === 0" />
-    <div class="day">
-      This Week
-    </div>
-    <ActivityItem v-for="activity in 20" :key="activity" :even="activity % 2  === 0" />
   </div>
 </template>
 
@@ -54,5 +57,14 @@ export default {
     padding-bottom: 0;
     font-size: 0.875rem;
     font-weight: 600;
+  }
+  .day:nth-child(1) {
+    border-top: 0;
+  }
+  .inner {
+    height: 100%;
+    overflow-y: auto;
+    position: absolute;
+    inset: 0;
   }
 </style>
